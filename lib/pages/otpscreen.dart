@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fml/pages/pickuform.dart';
 import 'package:fml/pages/runsheetlist.dart';
@@ -80,7 +81,7 @@ class _OtpscreenState extends State<Otpscreen> {
               height: 15,
             ),
             RichText(
-              text: const TextSpan(
+              text: TextSpan(
                 text: 'Didnot receive the code? ',
                 style: TextStyle(
                   fontSize: 14.0,
@@ -89,6 +90,7 @@ class _OtpscreenState extends State<Otpscreen> {
                 children: <TextSpan>[
                   TextSpan(
                     text: 'RESEND',
+                    recognizer: TapGestureRecognizer()..onTap = () {},
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],
